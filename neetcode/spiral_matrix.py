@@ -60,12 +60,16 @@ class Solution:
 
 
 if __name__=="__main__":
+    # Test matrices
     test_matrix = {
             1: [[1,2,3], [4,5,6]],
             2: [[10,20,30,40], [50,60,70,80]],
             3: [[33, 43]]
             }
+    
     obj = Solution()
+    
+    # Execute for all test matrices
     res = {
             1: obj.spiralOrder(test_matrix[1]),
             2: obj.spiralOrder(test_matrix[2]),
