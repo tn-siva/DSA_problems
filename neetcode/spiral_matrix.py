@@ -1,5 +1,5 @@
 class Solution:
-    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+    def spiralOrder(self, matrix: list[list[int]]) -> list[int]:
         out_list = []
         first_row = 0
         first_col = 0
@@ -57,3 +57,19 @@ class Solution:
                 break
 
         return out_list
+
+
+if __name__=="__main__":
+    test_matrix = {
+            1: [[1,2,3], [4,5,6]],
+            2: [[10,20,30,40], [50,60,70,80]],
+            3: [[33, 43]]
+            }
+    obj = Solution()
+    res = {
+            1: obj.spiralOrder(test_matrix[1]),
+            2: obj.spiralOrder(test_matrix[2]),
+            3: obj.spiralOrder(test_matrix[3])
+            }
+    for ii in range(1, 4):
+        print(f'{test_matrix[ii]} becomes {res[ii]}')
